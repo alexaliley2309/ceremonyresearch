@@ -489,6 +489,100 @@ mark.hl { border-radius: 3px; padding: 1px 2px; font-style: normal; }
 }
 .iquote-credit { margin-top: 5px; font-size: 11px; font-style: normal; color: var(--text-muted); font-family: var(--font-body); }
 
+/* ── Session Updates ── */
+.session-updates-card {
+  background: var(--card-bg);
+  border: none;
+  border-top: 3px solid var(--accent);
+  border-radius: 14px;
+  padding: 20px 22px 16px;
+  margin-bottom: 22px;
+  box-shadow: var(--shadow-sm);
+}
+.session-updates-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.session-updates-title {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  flex: 1;
+}
+.session-updates-date {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--accent-bg);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+}
+.session-updates-source {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.session-updates-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.session-update-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  background: var(--main-bg);
+}
+.update-area-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+.update-type-badge {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 100px;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  margin-top: 2px;
+  white-space: nowrap;
+}
+.update-content { flex: 1; min-width: 0; }
+.update-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.update-text {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.update-area-tag {
+  font-size: 10.5px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin-top: 3px;
+  font-weight: 500;
+}
+
 /* ── Synthesis ── */
 .synth-intro { font-size: 13px; color: var(--text-secondary); margin-bottom: 24px; max-width: 600px; line-height: 1.75; }
 .synth-area {
@@ -686,6 +780,33 @@ mark.hl { border-radius: 3px; padding: 1px 2px; font-style: normal; }
 // ═══════════════════════════════════════════════════════════
 // DATA
 // ═══════════════════════════════════════════════════════════
+
+const SESSION_UPDATES = [
+  {
+    date: '26 April 2026',
+    source: 'Debrief transcript + FigJam synthesis board',
+    credit: 'Hana Nagel',
+    additions: [
+      { areaId: 'meaning', type: 'observation', label: 'Emotional value predicts spend', text: 'The more emotionally invested a couple is in a specific output, the more willing they are to invest in producing it — budget conversations should begin with emotional value, not line-item costs.' },
+      { areaId: 'meaning', type: 'observation', label: 'Early adopter profile (4 types)', text: 'Four orientations identified: dislike tradition; prioritise intimacy; cost-conscious but aesthetics-forward; navigating complex family dynamics they want to sidestep.' },
+      { areaId: 'meaning', type: 'observation', label: '"Emotionally intentional" over "formally structured"', text: 'Meaningful ritual is not necessarily formal — what matters is emotional intention behind words, vows, setting, and moment design, not ceremonial protocol.' },
+      { areaId: 'meaning', type: 'tension', label: 'Clear on what they don\'t want; unclear on what they do', text: 'Couples are articulate and consistent in rejecting what they don\'t want, but underdeveloped in their positive vision — the gap requires active discovery support that few services currently offer.' },
+      { areaId: 'meaning', type: 'tension', label: 'Instagram/Pinterest input-output gap', text: 'Curated imagery hides the planning effort behind beautiful outputs, creating a gap between what couples think they want and what they are prepared to do or spend.' },
+      { areaId: 'meaning', type: 'opportunity', label: 'Emotional value discovery anchored in personal history', text: 'Ask couples to reflect on past celebrations they have loved — birthdays, family moments — and map what made them feel good; this becomes the anchor for all subsequent planning and spending decisions.' },
+      { areaId: 'vendor', type: 'observation', label: 'Intake experience design is a market gap', text: 'No vendor or platform currently begins the conversation by asking what memory a couple wants to walk away with — the dominant model is transactional, not emotionally-led. This is a genuine service differentiator.' },
+      { areaId: 'vendor', type: 'tension', label: 'Trust barriers identified but unquantified', text: 'Fear stack named: "Will this be legit? Will it feel special? What if weather changes? What about permits? Will my mum freak out?" — quality signals are known but their conversion threshold is not yet understood.' },
+      { areaId: 'vendor', type: 'tension', label: 'Current experience baseline unknown', text: 'No data on how couples currently solve this in Australia (DIY, planner, venue package, celebrant-only) — a gap that limits accurate service positioning.' },
+      { areaId: 'vendor', type: 'tension', label: 'Planning support spectrum uncalibrated', text: 'Guided options vs. "light touch," personalisation vs. streamlined ceremony — the right calibration per couple type is not yet mapped.' },
+      { areaId: 'vendor', type: 'opportunity', label: 'Trust-building content programme', text: 'Portfolio evidence, celebrant style videos, transparent inclusions, contingency plans, and permit guidance that address the specific fear stack at every point of conversion.' },
+      { areaId: 'cultural', type: 'tension', label: 'Secular couples face a compounded vocabulary gap', text: 'Non-religious Anglo-Australian couples have no inherited template AND limited awareness of what ceremony options exist beyond the conventional format — exposed to "you don\'t know what you don\'t know."' },
+      { areaId: 'cultural', type: 'opportunity', label: 'Ritual inspiration resource', text: 'A physical or digital resource introducing ceremony practices from cultures worldwide — framed as expanding vocabulary and permission, not cultural borrowing.' },
+      { areaId: 'family', type: 'observation', label: 'Purposeful roles deepen participation', text: 'Giving specific ceremonial roles to elders, parents, and children deepens participation and manages inclusion without expanding the guest list — "who is present" matters less than "what each person is invited to do and mean."' },
+      { areaId: 'size', type: 'tension', label: 'Adventure elopement may be a distinct archetype', text: 'Helicopter/mountaintop elopement (radical privacy, no guests) may be structurally distinct from the intimate micro-gathering (6–10 loved ones) — treating them as one product risks missing both.' },
+      { areaId: 'location', type: 'observation', label: '"Fun location discovery" requires safety infrastructure', text: 'Non-traditional locations are only appealing when paired with clear logistics, backup options, permits, and weather contingency — couples want the outcome of an interesting location, not the work of de-risking it.' },
+      { areaId: 'budget', type: 'tension', label: '"Affordable" is undefined and unresearched', text: 'Price sensitivity varies considerably across participants; what "affordable" means and the threshold at which cost becomes a planning barrier is not yet understood for this cohort.' },
+    ]
+  }
+];
 
 const AREAS = [
   {
@@ -2074,10 +2195,48 @@ function renderTranscript(p) {
 // SYNTHESIS
 // ═══════════════════════════════════════════════════════════
 
+function renderSessionUpdates() {
+  if (!SESSION_UPDATES.length) return '';
+  const typeColors = {
+    observation: { bg: 'rgba(0,122,255,0.08)', color: '#007aff' },
+    tension:     { bg: 'rgba(201,133,78,0.12)', color: '#b87333' },
+    opportunity: { bg: 'rgba(52,168,83,0.1)',   color: '#2a8a4a' },
+  };
+  const typeLabels = { observation: 'Observation', tension: 'Tension', opportunity: 'Opportunity' };
+  let h = '';
+  SESSION_UPDATES.forEach(session => {
+    const areaMap = {};
+    AREAS.forEach(a => { areaMap[a.id] = a; });
+    h += `<div class="session-updates-card">
+      <div class="session-updates-header">
+        <div class="session-updates-title">Added this session</div>
+        <span class="session-updates-date">${session.date}</span>
+        <span class="session-updates-source">${session.source} · ${session.credit}</span>
+      </div>
+      <div class="session-updates-grid">`;
+    session.additions.forEach(item => {
+      const area = areaMap[item.areaId] || {};
+      const tc = typeColors[item.type] || typeColors.observation;
+      h += `<div class="session-update-item">
+        <span class="update-area-dot" style="background:${area.color||'#999'};"></span>
+        <span class="update-type-badge" style="background:${tc.bg};color:${tc.color};">${typeLabels[item.type]}</span>
+        <div class="update-content">
+          <div class="update-label">${item.label}</div>
+          <div class="update-text">${item.text}</div>
+        </div>
+        <span class="update-area-tag" onclick="goArea('${item.areaId}')" style="color:${area.color||'var(--text-muted)'};cursor:pointer;">${area.label||''} →</span>
+      </div>`;
+    });
+    h += `</div></div>`;
+  });
+  return h;
+}
+
 function renderSynthesis() {
   let h = `<div class="fade-up">
     <div class="section-header"><div class="section-title">Research Synthesis</div></div>
-    <p class="synth-intro">Human-centred synthesis across <strong>${PARTICIPANTS.length}</strong> interview session${PARTICIPANTS.length!==1?'s':''} to date, organised by area of investigation. Observations are framed to capture who, what, why, how, and why it matters. Each area also surfaces tensions and gaps in the current evidence, and opportunity areas anchored to named human needs. Click any area to explore in depth.</p>`;
+    <p class="synth-intro">Human-centred synthesis across <strong>${PARTICIPANTS.length}</strong> interview session${PARTICIPANTS.length!==1?'s':''} to date, organised by area of investigation. Observations are framed to capture who, what, why, how, and why it matters. Each area also surfaces tensions and gaps in the current evidence, and opportunity areas anchored to named human needs. Click any area to explore in depth.</p>
+    ${renderSessionUpdates()}`;
   AREAS.forEach(area => {
     const allQ = PARTICIPANTS.flatMap(p => (p.quotes[area.id]||[]).map(q=>({...q,p})));
     const pCount = PARTICIPANTS.filter(p => p.quotes[area.id]?.length > 0).length;

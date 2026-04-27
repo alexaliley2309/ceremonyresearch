@@ -489,6 +489,183 @@ mark.hl { border-radius: 3px; padding: 1px 2px; font-style: normal; }
 }
 .iquote-credit { margin-top: 5px; font-size: 11px; font-style: normal; color: var(--text-muted); font-family: var(--font-body); }
 
+/* ── Synthesis Framework ── */
+.synth-fw-section { margin-bottom: 32px; }
+.synth-fw-header { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.synth-fw-num {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 100px;
+  padding: 2px 10px;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+.synth-fw-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.015em;
+}
+.exec-card {
+  background: var(--card-bg);
+  border: none;
+  border-radius: 14px;
+  padding: 24px 28px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.exec-para {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.85;
+}
+.pain-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.pain-card {
+  background: var(--card-bg);
+  border: none;
+  border-left: 3px solid #c9963a;
+  border-radius: 0 12px 12px 0;
+  padding: 16px 18px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pain-card-title {
+  font-family: var(--font-display);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+.pain-card-desc {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+.pain-card-why {
+  font-size: 11.5px;
+  color: #a07828;
+  background: rgba(201,150,58,0.07);
+  border-radius: 7px;
+  padding: 7px 10px;
+  line-height: 1.55;
+  margin-top: 2px;
+}
+.pain-card-why strong { font-weight: 600; }
+.themes-stack { display: flex; flex-direction: column; gap: 12px; }
+.theme-card {
+  background: var(--card-bg);
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.theme-card-head {
+  padding: 16px 20px 14px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.theme-card-title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  margin-bottom: 7px;
+}
+.theme-card-desc {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+.theme-card-opps {
+  padding: 14px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(245,245,247,0.5);
+}
+.theme-opps-lbl {
+  font-size: 9.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #2a8a4a;
+  margin-bottom: 2px;
+}
+.theme-opp-item {
+  display: flex;
+  gap: 10px;
+  padding: 9px 12px;
+  background: var(--card-bg);
+  border-radius: 9px;
+  border-left: 3px solid rgba(52,168,83,0.4);
+}
+.theme-opp-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+  line-height: 1.3;
+}
+.theme-opp-text {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.obs-card {
+  background: var(--card-bg);
+  border: none;
+  border-radius: 14px;
+  padding: 20px 22px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.obs-item {
+  display: flex;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  align-items: flex-start;
+}
+.obs-item:last-child { border-bottom: none; padding-bottom: 0; }
+.obs-item:first-child { padding-top: 0; }
+.obs-num {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  min-width: 20px;
+  padding-top: 2px;
+  flex-shrink: 0;
+}
+.obs-text {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  flex: 1;
+}
+.obs-area-tag {
+  font-size: 10.5px;
+  font-weight: 600;
+  flex-shrink: 0;
+  padding: 2px 8px;
+  border-radius: 100px;
+  margin-top: 2px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
 /* ── Session Updates ── */
 .session-updates-card {
   background: var(--card-bg);
@@ -780,6 +957,80 @@ mark.hl { border-radius: 3px; padding: 1px 2px; font-style: normal; }
 // ═══════════════════════════════════════════════════════════
 // DATA
 // ═══════════════════════════════════════════════════════════
+
+const SYNTHESIS_META = {
+  executiveSummary: [
+    'Across five participants, one pattern dominates regardless of demographic, background, or ceremony format: couples planning intimate and non-traditional ceremonies are not searching for a cheaper wedding — they are searching for a more meaningful one. Authenticity is the master value, and every other decision flows from it. The specific expression varies radically — P01 (Abdul) constructs meaning additively, weaving in cultural heritage and beloved pets; P02 (Greg) achieves it subtractively, stripping everything away to the irreducible; P05 (Teneille) frames it relationally, as giving form to a commitment already lived every day — but the underlying need is universal, consistent, and non-negotiable.',
+    'A significant market gap emerged clearly from the research: no vendor or planning platform in the current Australian landscape begins the planning conversation with emotional value. The dominant model is transactional — here are the services, here are the prices, you choose. Yet couples in this cohort consistently demonstrate that willingness to invest is directly tied to emotional resonance. Photographer, location, and celebratory food and drink attract strong investment because they map directly to the memories couples are trying to create; florals, attire, and formal décor largely do not. A service that orients the intake conversation around "what memory do you want to walk away with?" represents a genuine market disruption — and one that does not currently exist.',
+    'This is Phase 1 research with a small but highly consistent cohort. The signals are strong enough to build on, but several dimensions require further research before service design decisions can be made with confidence: what "affordable" means in practice for this cohort; how couples currently navigate the problem without a dedicated service; what specific quality signals build trust with hesitant couples; and whether the adventure elopement archetype warrants a separate service model entirely. Phase 2 should specifically recruit couples who are actively in the planning stages of a micro-wedding or elopement.',
+  ],
+  painPoints: [
+    { title: 'Decision fatigue around low-value choices', description: 'Couples face an industry that presents every element as equally important. For this cohort, most traditional wedding decisions — florals, formal attire, elaborate décor, extensive guest logistics — are low-ROI against their actual values. The cognitive and emotional cost of navigating and rejecting these defaults is a form of planning drain that compounds over time.', why: 'Stress avoidance is the dominant planning motivation for this cohort. A service that removes low-value decisions removes the primary planning pain — and becomes the thing people are actually looking for.' },
+    { title: 'Couples know what they don\'t want, but not what they do', description: 'The negative definition of the ideal ceremony is strong and consistent: no big guest list, no church, no formal attire, nothing that feels hollow or performative. The positive vision — what the couple actually does want — is underdeveloped and often unarticulated. Couples are planning from a position of avoidance, not design.', why: 'Planning from avoidance produces paralysis. Planning from a positive vision produces progress. Helping couples develop and articulate their positive vision is one of the most foundational — and currently unmet — service opportunities in this market.' },
+    { title: '"You don\'t know what you don\'t know"', description: 'Non-religious and culturally unaffiliated couples lack vocabulary for what ceremony can be beyond the template they have already rejected. No current service is designed to expand that vocabulary before asking couples to make choices. Without exposure to what is possible, design freedom becomes creative paralysis.', why: 'Couples cannot meaningfully co-design a ceremony from within a vocabulary they don\'t have. Discovery must come before decision — and the service that provides that discovery earns trust before any transaction takes place.' },
+    { title: 'Trust barriers to non-traditional ceremony', description: 'The fear stack is specific and consistent: Will this feel legitimate? Will vendors deliver? What happens if the weather changes or permits fall through? What will family think? These fears are rarely addressed proactively by services in this space, yet they are the gating condition for conversion.', why: 'Couples who want a non-traditional ceremony but cannot find visible proof of quality and contingency planning will default to convention or delay indefinitely. Trust infrastructure is not optional — it is the thing that makes the leap possible.' },
+    { title: 'The input-to-output gap', description: 'Curated imagery platforms (Instagram, Pinterest) inspire desire while concealing the planning effort, logistics, and cost required to produce those outcomes. Couples form expectations based on the output — the beautiful photograph — without understanding the input: the fittings, the vendor coordination, the dress size complications, the logistical chain behind each image.', why: 'Misaligned expectations produce overwhelm and erode trust when reality diverges from inspiration. A service that honestly bridges the input-output gap — helping couples understand what producing a desired outcome actually requires — becomes a genuinely useful and trusted partner.' },
+    { title: 'Family dynamics require deliberate strategy', description: 'Family expectations do not resolve themselves. Without a clear approach, they colonise the planning process. Every participant developed a strategy — self-funding for control, total secrecy for care, productive delegation for inclusion, advance notice for generosity — but none reported that any vendor or service helped them develop or refine that strategy.', why: 'Managing family dynamics is a planning dimension couples navigate alone and often with anxiety. A service that acknowledges and supports this dimension — not just the logistics of ceremony — addresses a real and underserved need.' },
+  ],
+  themes: [
+    {
+      title: 'Authenticity is the master value',
+      description: 'Every participant defines ceremony success in terms of authenticity — the feeling that the event genuinely reflects who they are as individuals and as a couple. This is not a preference or a differentiator; it is a threshold. Ceremonies that fail to meet it feel hollow, performative, or done for show. The expression of authenticity is unique to each couple, but the requirement is universal.',
+      opportunities: [
+        { label: 'Meaning-mapping conversation', text: 'A facilitated session that surfaces each partner\'s theory of what the wedding is for — where those theories converge, diverge, or create productive tension — giving couples a shared language before vendors or logistics enter the process.' },
+        { label: 'Authenticity anchor exercise', text: 'An early-planning exercise that articulates the two or three non-negotiable elements each partner would grieve if absent — used as an explicit decision filter when compromises must be made.' },
+      ]
+    },
+    {
+      title: 'Emotional value drives investment decisions',
+      description: 'Couples concentrate spend where emotional resonance is highest: photographer, location, celebratory food and drink. Elements that do not map directly to the memory they are trying to create — florals, formal attire, large guest logistics — receive minimal or no investment from this cohort. The more emotionally invested a couple is in a specific output, the more willing they are to invest in producing it.',
+      opportunities: [
+        { label: 'Emotional value discovery exercise', text: 'Ask couples to reflect on past celebrations they have loved — birthdays, family moments, shared milestones — and map what specific elements made them feel good. This personal map becomes the anchor for all subsequent planning and spending decisions.' },
+        { label: 'Spend philosophy conversation', text: 'A structured early conversation that helps couples articulate what they are trying to buy (experience, autonomy, quality, intimacy) before any budget is set — surfacing the values behind the numbers.' },
+      ]
+    },
+    {
+      title: 'Guided choices, not open-ended planning',
+      description: 'Couples want the agency and enjoyment of choosing between curated options. They do not want the cognitive load of sourcing, evaluating, and coordinating vendors from scratch. The pleasure is in selecting between photographer A and photographer B; the pain is in finding both. This distinction is the foundation of what a differentiated service model should look like.',
+      opportunities: [
+        { label: 'Bespoke-on-brief service model', text: 'A service that begins with a structured discovery conversation and builds a tailored package from what the couple describes — prioritising fit and autonomy over simplicity of delivery.' },
+        { label: 'Structured event plan with guided options', text: 'A planning framework that presents curated choices at each decision point — not a blank canvas, but a set of well-considered options the couple can own, adjust, and enjoy selecting between.' },
+      ]
+    },
+    {
+      title: 'The intake experience is the differentiator',
+      description: 'No service currently begins by asking "what memory do you want to walk away with?" The market is transactional; the opportunity is emotional. A planning service that positions itself as a thinking partner and co-designer — rather than a logistics provider — is genuinely disruptive in a market that does not currently offer this. The intake experience is not a pre-sale formality; it is the first expression of the service\'s value.',
+      opportunities: [
+        { label: 'Emotionally-led intake process', text: 'A structured first conversation that helps couples articulate what the ceremony is for, what memory it should create, and what has felt meaningful in their own experience — before any service menu is presented.' },
+        { label: 'Birthday analogy framework', text: 'Use reflection on past celebrations (birthdays, family gatherings) as a low-stakes entry point to surface what each partner already knows they value — translating lived emotional preference into ceremony design criteria.' },
+      ]
+    },
+    {
+      title: 'Ritual vocabulary for secular couples',
+      description: 'Non-religious Anglo-Australian couples face a compounded design challenge: no inherited template to accept or reject, and often no awareness of what ceremony options exist beyond the conventional format. Exposure to ritual practices from other cultures — approached thoughtfully rather than appropriatively — can meaningfully expand what feels possible before the couple is asked to make any choices.',
+      opportunities: [
+        { label: 'Ritual inspiration resource', text: 'A physical or digital resource introducing meaningful ceremony practices from cultures worldwide — sand ceremonies, elder roles, flower symbolism, spoken commitments — framed as expanding vocabulary and permission, not cultural borrowing.' },
+        { label: 'Ceremony element library', text: 'A curated library organised not by tradition or religion but by relational values, emotional intent, and what each element is designed to do — giving secular couples vocabulary and scaffolding without prescribing a tradition.' },
+      ]
+    },
+    {
+      title: 'Trust infrastructure for non-traditional ceremony',
+      description: 'Legitimacy, vendor quality, contingency planning, and parental reassurance are all trust levers that non-traditional ceremony services rarely address proactively. The fear stack couples carry into this space is specific and named — and the quality signals that address those fears (portfolio evidence, style videos, transparent inclusions, contingency plans) are identifiable but not yet calibrated for conversion impact.',
+      opportunities: [
+        { label: 'Trust-building content programme', text: 'Photographer portfolio evidence, celebrant style videos, transparent service inclusions, weather contingency plans, and permit guidance — designed to address the specific fear stack at every point in the conversion journey.' },
+        { label: 'Celebrant values directory', text: 'A matching resource organised by values dimensions — LGBTQ+ affirmation, cultural and religious competence, equality orientation, ceremony style — rather than geography or price alone.' },
+      ]
+    },
+  ],
+  observations: [
+    { text: 'Adventure elopement — helicopter, mountaintop, just two people — appears to be structurally distinct from the intimate micro-gathering. The latter is built around including 6–10 close supporters and requires logistics for a small group; the former prioritises radical privacy and extreme experience. Treating these as variations of the same product may miss a meaningful structural difference in what each archetype needs.', areaId: 'size' },
+    { text: 'Revisitability is an underrated location criterion. P03 (Lynelle) discovered post-hoc that returning to their Norfolk Island ceremony location was deeply and unexpectedly meaningful — a dimension that no planning conversation had surfaced at the time. The place you marry becomes the place you return to; this is a source of long-term value no cost-and-logistics framework captures.', areaId: 'location' },
+    { text: 'Financial independence and ceremony autonomy are the same conversation. Self-funding is primarily a control mechanism, not a cost-saving strategy — couples who self-fund are explicitly purchasing the right to decide. Budget planning and autonomy planning should be treated as a single integrated conversation, not separate ones.', areaId: 'budget' },
+    { text: 'For some couples, the planning process is itself part of the ceremony\'s meaning. P06 (Lauren): "nothing we didn\'t do together." Co-authoring the event is an expression of the relationship — and a service that makes the planning experience enjoyable is delivering value before the ceremony has taken place.', areaId: 'meaning' },
+    { text: 'Long-term couples (together 7+ years) frequently cite legal protections and asset security as motivating factors alongside emotional commitment — suggesting the decision to formalise is often a practical milestone, not only a romantic one. Ceremony should be understood in this context: it is the meaningful form given to a commitment already made and already lived.', areaId: 'meaning' },
+    { text: 'The research cohort skews toward participants who are settled and comfortable with their decisions. We have limited visibility into cases of genuine family strain, financial stress during planning, or retrospective regret — these dimensions require active recruitment and specific screener design in Phase 2.', areaId: 'family' },
+  ]
+};
 
 const SESSION_UPDATES = [
   {
@@ -2233,31 +2484,84 @@ function renderSessionUpdates() {
 }
 
 function renderSynthesis() {
+  const areaMap = {};
+  AREAS.forEach(a => { areaMap[a.id] = a; });
+
+  // ── Section 1: Executive Summary ──
   let h = `<div class="fade-up">
-    <div class="section-header"><div class="section-title">Research Synthesis</div></div>
-    <p class="synth-intro">Human-centred synthesis across <strong>${PARTICIPANTS.length}</strong> interview session${PARTICIPANTS.length!==1?'s':''} to date, organised by area of investigation. Observations are framed to capture who, what, why, how, and why it matters. Each area also surfaces tensions and gaps in the current evidence, and opportunity areas anchored to named human needs. Click any area to explore in depth.</p>
-    ${renderSessionUpdates()}`;
-  AREAS.forEach(area => {
-    const allQ = PARTICIPANTS.flatMap(p => (p.quotes[area.id]||[]).map(q=>({...q,p})));
-    const pCount = PARTICIPANTS.filter(p => p.quotes[area.id]?.length > 0).length;
-    h += `<div class="synth-area">
-      <div class="synth-area-head" onclick="goArea('${area.id}')">
-        <span class="nav-dot" style="background:${area.color};width:11px;height:11px;"></span>
-        <span class="synth-area-title">${area.label}</span>
-        <span class="synth-area-meta">${allQ.length} quotes · ${pCount} participant${pCount!==1?'s':''}</span>
-        <span style="color:var(--text-muted);font-size:13px;">→</span>
+    <div class="section-header">
+      <div class="section-title">Research Synthesis</div>
+      <span class="section-count">${PARTICIPANTS.length} participants · 7 areas of investigation</span>
+    </div>
+    ${renderSessionUpdates()}
+    <div class="synth-fw-section">
+      <div class="synth-fw-header">
+        <span class="synth-fw-num">01</span>
+        <span class="synth-fw-title">Executive Summary</span>
       </div>
-      <div class="synth-area-body">
-        <p class="synth-narrative">${area.narrative}</p>
-        <div class="synth-insights-lbl">Observations</div>
-        <div class="synth-insights">${area.insights.map(i=>`<div class="synth-insight-item" style="border-left-color:${area.color};background:${area.bg};">${i}</div>`).join('')}</div>
-        ${(area.tensions||[]).length>0?`<div class="synth-section-lbl">Tensions &amp; Gaps</div><div class="synth-tensions">${area.tensions.map(t=>`<div class="synth-tension-item">${t}</div>`).join('')}</div>`:''}
-        ${(area.opportunities||[]).length>0?`<div class="synth-section-lbl">Opportunity Areas</div><div class="synth-opps">${area.opportunities.map(o=>`<div class="synth-opp-item" style="border-left-color:${area.color};background:${area.bg};"><div><div class="opp-need" style="color:${area.color};">Human need: ${o.need}</div>${o.opportunity}</div></div>`).join('')}</div>`:''}
-        ${allQ.length>0?`<div class="synth-insights-lbl">Supporting Quotes</div><div class="synth-quotes">${allQ.slice(0,2).map(q=>`<div class="iquote" style="border-left-color:${area.color};background:${area.bg};">&ldquo;${esc(q.text)}&rdquo;<div class="iquote-credit">${q.p.name} (${q.p.id}) · ${q.timestamp}</div></div>`).join('')}</div>`:''}
+      <div class="exec-card">
+        ${SYNTHESIS_META.executiveSummary.map(p => `<p class="exec-para">${p}</p>`).join('')}
+      </div>
+    </div>`;
+
+  // ── Section 2: Key Pain Points ──
+  h += `<div class="synth-fw-section">
+    <div class="synth-fw-header">
+      <span class="synth-fw-num">02</span>
+      <span class="synth-fw-title">Key Pain Points &amp; Tensions</span>
+    </div>
+    <div class="pain-grid">`;
+  SYNTHESIS_META.painPoints.forEach(pp => {
+    h += `<div class="pain-card">
+      <div class="pain-card-title">${pp.title}</div>
+      <div class="pain-card-desc">${pp.description}</div>
+      <div class="pain-card-why"><strong>Why it matters —</strong> ${pp.why}</div>
+    </div>`;
+  });
+  h += `</div></div>`;
+
+  // ── Section 3: Main Themes + Opportunity Areas ──
+  h += `<div class="synth-fw-section">
+    <div class="synth-fw-header">
+      <span class="synth-fw-num">03</span>
+      <span class="synth-fw-title">Main Themes &amp; Opportunity Areas</span>
+    </div>
+    <div class="themes-stack">`;
+  SYNTHESIS_META.themes.forEach(theme => {
+    h += `<div class="theme-card">
+      <div class="theme-card-head">
+        <div class="theme-card-title">${theme.title}</div>
+        <div class="theme-card-desc">${theme.description}</div>
+      </div>
+      <div class="theme-card-opps">
+        <div class="theme-opps-lbl">Opportunity Areas</div>
+        ${theme.opportunities.map(o => `<div class="theme-opp-item">
+          <div>
+            <div class="theme-opp-label">${o.label}</div>
+            <div class="theme-opp-text">${o.text}</div>
+          </div>
+        </div>`).join('')}
       </div>
     </div>`;
   });
-  h += `</div>`;
+  h += `</div></div>`;
+
+  // ── Section 4: Final Observations ──
+  h += `<div class="synth-fw-section">
+    <div class="synth-fw-header">
+      <span class="synth-fw-num">04</span>
+      <span class="synth-fw-title">Final Observations</span>
+    </div>
+    <div class="obs-card">`;
+  SYNTHESIS_META.observations.forEach((obs, i) => {
+    const area = areaMap[obs.areaId] || {};
+    h += `<div class="obs-item">
+      <span class="obs-num">${String(i+1).padStart(2,'0')}</span>
+      <span class="obs-text">${obs.text}</span>
+      ${area.label ? `<span class="obs-area-tag" onclick="goArea('${obs.areaId}')" style="background:${area.bg};color:${area.color};">${area.label}</span>` : ''}
+    </div>`;
+  });
+  h += `</div></div></div>`;
   return h;
 }
 
